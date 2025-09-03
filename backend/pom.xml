@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mustafa</groupId>
-	<artifactId>notes-app</artifactId>
+	<artifactId>notes_app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>notes-app</name>
-	<description>notes-app project for Namekart</description>
+	<name>notes_app</name>
+	<description>notes_app_backend</description>
 	<url/>
 	<licenses>
 		<license/>

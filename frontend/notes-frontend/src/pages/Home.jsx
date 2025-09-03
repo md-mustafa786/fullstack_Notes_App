@@ -18,8 +18,12 @@ const Home = () => {
   const handleAdd = (note) => setNotes([note, ...notes]);
 
   const handleDelete = async (id) => {
-    await deleteNote(id);
-    setNotes(notes.filter((n) => n.id !== id));
+    try {
+      await deleteNote(id);
+      setNotes(notes.filter((note) => note.id !== id)); // UI update
+    } catch (err) {
+      console.error("Delete failed:", err);
+    }
   };
 
   const handleUpdate = (updatedNote) => {

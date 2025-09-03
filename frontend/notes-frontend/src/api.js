@@ -15,8 +15,12 @@ export const addNote = async (note) => {
 };
 
 export const deleteNote = async (id) => {
-  const response = await fetch(`${API_URL}/api/notes/${id}`, { method: "DELETE" });
-  return response.json();
+  const res = await fetch(`${API_URL}/api/notes/${id}`, {
+    method: "DELETE",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to delete note");
+  }
 };
 
 export const updateNote = async (id, note) => {
